@@ -1,4 +1,4 @@
-name: Build BatteryUKRM
+name: Build BatteryUKRM-RH
 
 on:
   push:
@@ -12,9 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Theos
+      - name: Install Roothide Theos
         run: |
-          git clone --recursive https://github.com/theos/theos.git $HOME/theos
+          git clone --recursive https://github.com/roothide/theos.git $HOME/theos
           echo "THEOS=$HOME/theos" >> "$GITHUB_ENV"
 
       - name: Install signing tool
@@ -23,7 +23,7 @@ jobs:
           which ldid
           ldid -v || true
 
-      - name: Build rootless package
+      - name: Build Roothide package
         run: |
           make clean package FINALPACKAGE=1
           ls -lah packages/
@@ -31,7 +31,7 @@ jobs:
       - name: Upload DEB
         uses: actions/upload-artifact@v4
         with:
-          name: BatteryUKRM-1.0.2
+          name: BatteryUKRM-RH-1.0.2
           path: packages/*.deb
           if-no-files-found: error
           retention-days: 7
