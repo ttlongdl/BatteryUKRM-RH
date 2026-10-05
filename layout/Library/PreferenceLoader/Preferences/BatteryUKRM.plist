@@ -1,0 +1,10 @@
+{
+    entry = {
+        bundle = BatteryUKRMPrefs;
+        cell = PSLinkCell;
+        detail = BUKRootListController;
+        icon = "icon.png";
+        isController = 1;
+        label = BatteryUKRM-RH;
+    };
+}
