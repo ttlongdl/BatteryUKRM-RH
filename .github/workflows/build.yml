@@ -31,7 +31,7 @@ jobs:
       - name: Upload DEB
         uses: actions/upload-artifact@v4
         with:
-          name: BatteryUKRM-RH-1.0.2
+          name: BatteryUKRM-RH-1.1.0
           path: packages/*.deb
           if-no-files-found: error
           retention-days: 7
