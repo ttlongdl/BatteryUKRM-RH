@@ -12,6 +12,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Sync approved BatteryUKRM icons
+        run: |
+          mkdir -p prefs/Resources
+          curl -fL "https://raw.githubusercontent.com/ttlongdl/BatteryUKRM/main/prefs/Resources/icon.png" -o prefs/Resources/icon.png
+          curl -fL "https://raw.githubusercontent.com/ttlongdl/BatteryUKRM/main/prefs/Resources/icon@2x.png" -o prefs/Resources/icon@2x.png
+          curl -fL "https://raw.githubusercontent.com/ttlongdl/BatteryUKRM/main/prefs/Resources/icon@3x.png" -o prefs/Resources/icon@3x.png
+          file prefs/Resources/icon*.png
+          shasum -a 256 prefs/Resources/icon*.png
+
       - name: Install Roothide Theos
         run: |
           git clone --recursive https://github.com/roothide/theos.git $HOME/theos
