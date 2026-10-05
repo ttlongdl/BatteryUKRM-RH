@@ -1,8 +1,8 @@
-Package: com.ttlongdl.batteryukrm
-Name: BatteryUKRM
+Package: com.ttlongdl.batteryukrm-rh
+Name: BatteryUKRM-RH
 Version: 1.0.2
-Architecture: iphoneos-arm64
-Description: Hides Apple repair warnings, restores the native Battery Health display for replaced batteries, and shows the real battery cycle count.
+Architecture: iphoneos-arm64e
+Description: Roothide build of BatteryUKRM. Hides Apple repair warnings, restores the native Battery Health display for replaced batteries, and shows the real battery cycle count.
 Maintainer: ttlongdl
 Author: ttlongdl
 Section: Tweaks
