@@ -62,6 +62,52 @@ Install the **Roothide** BatteryUKRM-RH package through your preferred compatibl
 
 Upgrading from **1.0.2** to **1.1.0** keeps the previous default behavior: all three switches start enabled.
 
+## Frequently Asked Questions (FAQ)
+
+### Can BatteryUKRM-RH hide the “Unknown Part” battery warning on a jailbroken iPhone?
+BatteryUKRM-RH is the **Roothide** build of BatteryUKRM. Its **Hide Battery Repair Warnings** module is designed to hide battery-related “Unknown Part / Repair Needed” warnings in iOS Settings on compatible devices. Enable the module in **Settings → Tweaks → BatteryUKRM**, then respring. This changes the displayed warning; it does not authenticate the replacement battery.
+
+### Can I restore Battery Health / Maximum Capacity after replacing an iPhone battery?
+The **Restore Maximum Capacity** module can restore the native Maximum Capacity presentation on supported device/iOS combinations. It does not increase the battery’s actual capacity or guarantee a correct percentage on every device.
+
+### Does it show the real battery cycle count?
+The **Show Cycle Count** module reads `CycleCount` from `AppleSmartBattery` rather than inserting a fixed number. Availability and presentation depend on iOS compatibility.
+
+### Does BatteryUKRM-RH require transplanting the original battery BMS or flex cable?
+The original **rootless** BatteryUKRM was tested with a replacement Apple battery **without transplanting the original BMS/flex**. That is a reference test, **not independent verification** of every Roothide device and battery combination.
+
+### Is BatteryUKRM-RH compatible with Roothide, Dopamine rootless, and iOS 17?
+This repository contains the **Roothide** package (`com.ttlongdl.batteryukrm-rh`). For **Dopamine rootless**, use the separate [BatteryUKRM rootless repository](https://github.com/ttlongdl/BatteryUKRM). Community testers confirmed **Roothide 1.0.2**; **Roothide 1.1.0** still needs broader real-device testing. Compatibility varies by iOS version.
+
+### Why is Maximum Capacity stuck loading on iOS 17.7?
+The shared battery-hook implementation has a reported iOS 17.7 compatibility issue. Try disabling **Restore Maximum Capacity** and respringing. This symptom alone does not prove a battery hardware fault.
+
+### Does it hide replaced-display / screen warnings?
+No such support has been verified. BatteryUKRM-RH targets **battery-related** information.
+
+## Câu hỏi thường gặp (FAQ tiếng Việt)
+
+### Làm sao ẩn cảnh báo “Linh kiện không xác định” của pin trên iPhone jailbreak Roothide?
+BatteryUKRM-RH có module **Ẩn cảnh báo sửa chữa pin** nhằm ẩn cảnh báo liên quan đến pin trong Cài đặt trên thiết bị tương thích. Bật module tại **Cài đặt → Tweaks → BatteryUKRM** rồi **Respring**. Tweak chỉ thay đổi cách hiển thị, **không xác thực pin thay thế**.
+
+### Thay pin iPhone rồi có hiện lại Tình trạng pin / Dung lượng tối đa được không?
+Module **Khôi phục dung lượng tối đa** có thể khôi phục giao diện hiển thị gốc trên một số cấu hình tương thích; **không làm tăng dung lượng pin thực** và không bảo đảm hoạt động trên mọi phiên bản iOS.
+
+### Tweak có hiện số chu kỳ sạc pin thật không?
+Module **Hiển thị số chu kỳ** đọc `CycleCount` từ `AppleSmartBattery`, không gán số chu kỳ cố định. Khả năng hiển thị phụ thuộc thiết bị và iOS.
+
+### Có cần chuyển mạch BMS/flex của pin cũ sang pin mới không?
+Bản **rootless gốc** đã được kiểm tra trên iPhone 12 Pro iOS 17.0 với pin Apple thay thế **không chuyển mạch BMS/flex**. Đây **không phải** xác nhận độc lập cho mọi thiết bị Roothide.
+
+### BatteryUKRM-RH khác gì BatteryUKRM rootless?
+**BatteryUKRM-RH** dành cho **Roothide**; bản [BatteryUKRM](https://github.com/ttlongdl/BatteryUKRM) dành cho **rootless / Dopamine**. Roothide 1.0.2 đã có người dùng xác nhận; 1.1.0 cần kiểm thử thực tế thêm.
+
+### Vì sao iOS 17.7 bị xoay vòng ở mục Dung lượng tối đa?
+Có báo cáo lỗi tương thích hook trên iOS 17.7. Hãy thử tắt **Khôi phục dung lượng tối đa** rồi respring; không nên kết luận pin hỏng chỉ dựa vào hiện tượng này.
+
+### Có ẩn được cảnh báo thay màn hình không?
+Chưa được xác minh. Tweak chỉ tập trung vào **linh kiện pin**.
+
 ## Tiếng Việt
 
 **BatteryUKRM-RH** là phiên bản **Roothide** miễn phí của BatteryUKRM dành cho iPhone jailbreak, tập trung vào việc khôi phục cách hiển thị thông tin pin sau khi thay pin, đồng thời ẩn các cảnh báo linh kiện pin không xác định trong Cài đặt.
